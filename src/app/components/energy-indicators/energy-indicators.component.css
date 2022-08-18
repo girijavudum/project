@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+#checkbox {
+	display: none;
+}
+#checkbox:checked ~ .body .side-bar {
+	width: 70px;
+}
+#checkbox:checked ~ .body .side-bar .user-p{
+	visibility: hidden;
+}
+#checkbox:checked ~ .body .side-bar a span{
+	display: none;
+}
+ .container{
+    padding-top: 10px;
+}
+.btn{
+	padding-left: 2px;
+}
+table{
+	width:70%;
+	padding-left: 100px;
+
+	position:center;
+	
+}
+.table1{
+
+	padding-top: 20px;
+}
+.container1{
+	padding-top: 10px;
+}
+canvas{
+	width: 70%;
+}
+.bar{
+	width: 50%;
+
+}
+.drop{
+	padding-top: 10px;
+}

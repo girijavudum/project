@@ -1,0 +1,18 @@
+nav{
+    height:100%
+}
+.side-nav-button {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font: size 1.5re;
+    cursor:pointer;
+}
+.side-nav-button:hover{
+    background-color: rgb(173, 162, 162);
+    border-radius: 30%;
+}
+a{
+    text-align: center;
+}
+

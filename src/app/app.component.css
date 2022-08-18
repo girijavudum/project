@@ -1,0 +1,17 @@
+app-header {
+    position:fixed;
+    width:100%;
+    top:0px;
+    z-index:2;
+    height:4rem;
+    left:0;
+   
+}
+app-energy-indicators{
+    top:4rem;
+}
+
+
+
+
+

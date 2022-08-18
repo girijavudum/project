@@ -1,0 +1,143 @@
+
+<!-- Search Panel -->
+
+ <br><br><br>
+<div class="container1">
+    <div class="row">
+       
+        <div class="col-2">
+            <h3><b>country :</b></h3>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="country">
+                <option value="">Select Country</option>
+                <option *ngFor="let country of countries">{{ country }}</option>
+            </select>
+        </div>
+       
+        <div class="col-2">
+            <h3><b>Indicator Type :</b></h3>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="indType">
+                <option value="">Select Indicator Type</option>
+                <option *ngFor="let ind of indicators">{{ ind }}</option>
+            </select>
+        </div>
+        
+        <div class="col-2">
+            <h3><b>Year :</b></h3>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="year">
+                <option value="">Select Year</option>
+                <option *ngFor="let year of years">{{ year }}</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <br><br>
+            <p></p>
+            <button class="btn btn-primary" (click)="calculate()">Search</button>
+        </div>
+ 
+    </div>
+</div>
+<!-- Cards -->
+<div class="container">
+    <div class="row">
+       
+        <div class="col-3">
+            <div class="card p-3 bg-primary">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3><b>Energy Indicators</b></h3>
+                    </div>
+                    <div> Total Enery Import : {{ energyImport }} {{ expimpUnit }} </div>
+                    <div> Total Enery Export : {{ energyExport }} {{ expimpUnit }} </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-3">
+            <div class="card p-3 bg-secondary">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3><b>Gas indicators</b></h3></div>
+                    <div>Gas Reverse to production : {{ gpRatio }} {{ gpUnit }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-3">
+            <div class="card p-3 bg-warning">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3><b>Economic indicators</b></h3></div>
+                    <div>GDP per capita based on PPP : {{ gdpPPP }} {{ gdpUnit }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Table -->
+<div class="drop">
+<div class="row">
+<div class="col-2"> <h4> <b>Select Country :</b></h4>
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="country" multiple>
+
+    <option value="">Select Country</option>
+     <option *ngFor="let countryA of countries">  {{ countryA }}</option>
+</select>
+</div>
+<div class="col-2"> 
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="indType">
+    <option value="">Select Indicator Type</option>
+    <option *ngFor="let ind of indicators">{{ ind }}</option>
+</select>
+</div>
+<div class="col-2"> 
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="year">
+    <option value="">Select Year</option>
+    <option *ngFor="let year of years">{{ year }}</option>
+</select>
+</div>
+<div class="col-1">
+    <button class="btn btn-primary" (click)="tablecal()">display</button>
+</div>
+
+
+</div>
+</div>
+<div class="table1" >
+    <table class="table">
+        <thead >
+            <tr>
+                <th>indicator</th>
+                <th>{{country[0]}}</th>
+                <th>{{country[1]}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let c of value1'>
+                <td>{{ c.indicator }}</td>
+                <td>{{ c.value1 }}</td>
+                <td>{{ c['value\r'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!--charts-->   
+<div class="bar">
+    <canvas
+          baseChart
+          [data]="salesData"
+          [type]="'bar'"
+          [options]="chartOptions"
+        >
+        
+        </canvas>
+  </div>
+
+
+
+
+ 
+
+    
