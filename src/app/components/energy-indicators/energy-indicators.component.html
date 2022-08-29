@@ -1,48 +1,47 @@
-
 <!-- Search Panel -->
-
- <br><br><br>
+<br><br><br>
 <div class="container1">
+    <h2>SUMMARY OF TABLE</h2>
     <div class="row">
-       
+
         <div class="col-2">
-            <h3><b>country :</b></h3>
+            <label><b>country :</b></label>
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="country">
                 <option value="">Select Country</option>
                 <option *ngFor="let country of countries">{{ country }}</option>
             </select>
         </div>
-       
+
         <div class="col-2">
-            <h3><b>Indicator Type :</b></h3>
-            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="indType">
+            <label><b>Indicator Type :</b></label>
+            <select class="custom-select " id="inputGroupSelect02" [(ngModel)]="indType">
                 <option value="">Select Indicator Type</option>
                 <option *ngFor="let ind of indicators">{{ ind }}</option>
             </select>
         </div>
-        
+
         <div class="col-2">
-            <h3><b>Year :</b></h3>
-            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="year">
+            <label><b>Year :</b></label>
+            <select class="custom-select " id="inputGroupSelect02" [(ngModel)]="year">
                 <option value="">Select Year</option>
                 <option *ngFor="let year of years">{{ year }}</option>
             </select>
         </div>
         <div class="col-1">
-            <br><br>
-            <p></p>
-            <button class="btn btn-primary" (click)="calculate()">Search</button>
+            <label><br></label>
+            <br>
+            <button class="btn btn-primary " (click)="calculate()">Search</button>
         </div>
- 
+
     </div>
 </div>
 <!-- Cards -->
 <div class="container">
     <div class="row">
-       
+
         <div class="col-3">
-            <div class="card p-3 bg-primary">
-                <div class="card-body">
+            <div class="card p-3 bg-primary  m-1">
+                <div class="card-body ">
                     <div class="card-title">
                         <h3><b>Energy Indicators</b></h3>
                     </div>
@@ -51,22 +50,24 @@
                 </div>
             </div>
         </div>
-       
-        <div class="col-3">
-            <div class="card p-3 bg-secondary">
+
+        <div class="col-4">
+            <div class="card p-3 bg-secondary m-1">
                 <div class="card-body">
                     <div class="card-title">
-                        <h3><b>Gas indicators</b></h3></div>
+                        <h3><b>Gas indicators</b></h3>
+                    </div>
                     <div>Gas Reverse to production : {{ gpRatio }} {{ gpUnit }}</div>
                 </div>
             </div>
         </div>
-        
-        <div class="col-3">
-            <div class="card p-3 bg-warning">
+
+        <div class="col-4">
+            <div class="card p-3 bg-warning  m-1">
                 <div class="card-body">
                     <div class="card-title">
-                        <h3><b>Economic indicators</b></h3></div>
+                        <h3><b>Economic indicators</b></h3>
+                    </div>
                     <div>GDP per capita based on PPP : {{ gdpPPP }} {{ gdpUnit }}</div>
                 </div>
             </div>
@@ -76,23 +77,23 @@
 
 
 <!-- Table -->
-<div class="drop">
+<!--div class="drop">
 <div class="row">
 <div class="col-2"> <h4> <b>Select Country :</b></h4>
-<select class="custom-select" id="inputGroupSelect" [(ngModel)]="country" multiple>
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="tablecont" multiple>
 
     <option value="">Select Country</option>
      <option *ngFor="let countryA of countries">  {{ countryA }}</option>
 </select>
 </div>
 <div class="col-2"> 
-<select class="custom-select" id="inputGroupSelect" [(ngModel)]="indType">
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="tableInd">
     <option value="">Select Indicator Type</option>
     <option *ngFor="let ind of indicators">{{ ind }}</option>
 </select>
 </div>
 <div class="col-2"> 
-<select class="custom-select" id="inputGroupSelect" [(ngModel)]="year">
+<select class="custom-select" id="inputGroupSelect" [(ngModel)]="tableyear">
     <option value="">Select Year</option>
     <option *ngFor="let year of years">{{ year }}</option>
 </select>
@@ -103,41 +104,69 @@
 
 
 </div>
-</div>
-<div class="table1" >
+</div-->
+<h2>TABLE</h2>
+<div class="table1">
     <table class="table">
-        <thead >
+        <thead>
             <tr>
-                <th>indicator</th>
-                <th>{{country[0]}}</th>
-                <th>{{country[1]}}</th>
+                <th>{{indType}}</th>
+                <th>{{country}}</th>
+                <!--th>{{country}}</th-->
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor='let c of value1'>
+            <tr *ngFor='let c of comparision'>
                 <td>{{ c.indicator }}</td>
-                <td>{{ c.value1 }}</td>
-                <td>{{ c['value\r'] }}</td>
+                <td>{{ c['value'] }}</td>
+                <!--td>{{ c['value\r'] }}</td-->
             </tr>
         </tbody>
     </table>
 </div>
 
-    <!--charts-->   
-<div class="bar">
-    <canvas
-          baseChart
-          [data]="salesData"
-          [type]="'bar'"
-          [options]="chartOptions"
-        >
-        
-        </canvas>
-  </div>
+<h2>BAR CHART</h2>
+<div class="container1">
+    <div class="row">
+
+        <div class="col-2">
+            <label><b>country :</b></label>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphContSearch">
+                <option value="">Select Country</option>
+                <option *ngFor="let country of countries">{{ country }}</option>
+            </select>
+        </div>
+
+        <div class="col-2">
+            <label><b>Indicator Type :</b></label>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphIndiTypeSearch"
+                (ngModelChange)="filterIndicator(graphIndiTypeSearch)">
+                <option value="">Select Indicator Type</option>
+                <option *ngFor="let ind of indicators">{{ ind }}</option>
+            </select>
+        </div>
+
+        <div class="col-2">
+            <label><b>Indicator:</b></label>
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphIndiSearch">
+                <option value="">Indicator</option>
+                <option *ngFor="let Indicator of filteredIndicator">{{ Indicator.indicator }}</option>
+            </select>
+        </div>
+        <div class="col-1">
+            <label><br></label>
+            <br>
+            <button class="btn btn-primary"
+                (click)="generateGraph(graphContSearch,graphIndiTypeSearch,graphIndiSearch)">Search</button>
+        </div>
+
+    </div>
+</div>
 
 
+<!--charts-->
+<div class="bar" *ngIf="graphIndiSearch">
+    <canvas baseChart [data]="salesData" [type]="'bar'" [options]="chartOptions">
 
-
- 
-
-    
+    </canvas>
+</div>
