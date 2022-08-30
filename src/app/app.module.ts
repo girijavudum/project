@@ -18,6 +18,10 @@ import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { NgChartsModule } from 'ng2-charts';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { TableComponent } from './table/table.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+//import * as CanvasJSAngularChart from '../assets/canvasjs.angular.component';
+//var CanvasJSChart = CanvasJSAngularChart.CanvasJSChart;
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     EnergyIndicatorsComponent,
     NComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatListModule,
     NgChartsModule,
-    MatGridListModule
+    MatGridListModule,
+    NgMultiSelectDropDownModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

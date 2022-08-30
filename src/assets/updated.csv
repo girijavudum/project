@@ -1,19 +1,19 @@
 id,country,indicatorType,indicator,unit,year,value
-1,algeria,economic indicators,GDP,US $B,2017,
-2,algeria,economic indicators,GDP based on PPP,Int. $B,2017,
-3,algeria,economic indicators,Real GDP growth,%,2017,
-4,algeria,economic indicators,GDP per capita,,2017,
-5,algeria,economic indicators,GDP per capita based on PPP,US $,2017,
-6,algeria,economic indicators,Population,Int. $B,2017,
-7,algeria,economic indicators,Land Area,million,2017,
-8,algeria,economic indicators,Human Development Index,sq.km,2017,
-9,algeria,economic indicators,Inflation rate,,2017,
-10,algeria,economic indicators,Unemployment rate,%,2017,
-11,algeria,economic indicators,Current account balance,%,2017,
-12,algeria,economic indicators,Government Gross Debt (share of GDP),US $B,2017,
-13,algeria,economic indicators,International Reserves,%,2017,
-14,algeria,economic indicators,CO2 emissions intensity,US $B,2017,
-15,algeria,economic indicators,CO2 emissions per capita,kg/$1000 of GDP,2017,
+1,algeria,economic indicators,GDP,US $B,2017
+2,algeria,economic indicators,GDP based on PPP,Int. $B,2017
+3,algeria,economic indicators,Real GDP growth,%,2017
+4,algeria,economic indicators,GDP per capita,$B,2017
+5,algeria,economic indicators,GDP per capita based on PPP,US $,2017
+6,algeria,economic indicators,Population,Int. $B,2017
+7,algeria,economic indicators,Land Area,million,2017
+8,algeria,economic indicators,Human Development Index,sq.km,2017
+9,algeria,economic indicators,Inflation rate,,2017
+10,algeria,economic indicators,Unemployment rate,%,2017
+11,algeria,economic indicators,Current account balance,%,2017
+12,algeria,economic indicators,Government Gross Debt (share of GDP),US $B,2017
+13,algeria,economic indicators,International Reserves,%,2017
+14,algeria,economic indicators,CO2 emissions intensity,US $B,2017
+15,algeria,economic indicators,CO2 emissions per capita,kg/$1000 of GDP,2017
 16,algeria,economic indicators,GDP,metric tons,2016,168.32
 17,algeria,economic indicators,GDP based on PPP,US $B,2016,609.39
 18,algeria,economic indicators,Real GDP growth,Int. $B,2016,3.6
@@ -21,14 +21,14 @@ id,country,indicatorType,indicator,unit,year,value
 20,algeria,economic indicators,GDP per capita based on PPP,US $,2016,14950
 21,algeria,economic indicators,Population,Int. $B,2016,40.38
 22,algeria,economic indicators,Land Area,million,2016,2381741
-23,algeria,economic indicators,Human Development Index,sq.km,2016,
+23,algeria,economic indicators,Human Development Index,sq.km,2016
 24,algeria,economic indicators,Inflation rate,,2016,5.9
 25,algeria,economic indicators,Unemployment rate,%,2016,9.9
 26,algeria,economic indicators,Current account balance,%,2016,-25.3
 27,algeria,economic indicators,Government Gross Debt (share of GDP),US $B,2016,13
-28,algeria,economic indicators,International Reserves,%,2016,
-29,algeria,economic indicators,CO2 emissions intensity,US $B,2016,
-30,algeria,economic indicators,CO2 emissions per capita,kg/$1000 of GDP,2016,
+28,algeria,economic indicators,International Reserves,%,2016
+29,algeria,economic indicators,CO2 emissions intensity,US $B,2016
+30,algeria,economic indicators,CO2 emissions per capita,kg/$1000 of GDP,2016
 31,algeria,economic indicators,GDP,metric tons,2015,166.84
 32,algeria,economic indicators,GDP based on PPP,US $B,2015,580.74
 33,algeria,economic indicators,Real GDP growth,Int. $B,2015,3.9
@@ -36,7 +36,7 @@ id,country,indicatorType,indicator,unit,year,value
 35,algeria,economic indicators,GDP per capita based on PPP,US $,2015,14532
 36,algeria,economic indicators,Population,Int. $B,2015,39.67
 37,algeria,economic indicators,Land Area,million,2015,2381741
-38,algeria,economic indicators,Human Development Index,sq.km,2015,
+38,algeria,economic indicators,Human Development Index,sq.km,2015
 39,algeria,economic indicators,Inflation rate,,2015,4.8
 40,algeria,economic indicators,Unemployment rate,%,2015,11.2
 41,algeria,economic indicators,Current account balance,%,2015,-27.5
@@ -12784,3 +12784,4 @@ id,country,indicatorType,indicator,unit,year,value
 12783,yemen,energy efficiency indicators,Energy efficiency potential - Transport Sector,% of EE potential,2010,
 12784,yemen,energy efficiency indicators,Energy efficiency potential - Services Sector,% of EE potential,2010,
 12785,,,,% of EE potential,,
+12784,testing,energy efficiency testing,testing,% of EE potential,2010,

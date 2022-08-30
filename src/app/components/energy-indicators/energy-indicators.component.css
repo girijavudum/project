@@ -24,14 +24,15 @@
 }
 table{
 	width:70%;
-	padding-left: 100px;
+	padding-left: 20px;
 
 	position:center;
 	
 }
 .table1{
-
+	width:80%;
 	padding-top: 20px;
+	padding-left: 20px;
 }
 .container1{
 	padding-top: 10px;
@@ -46,3 +47,11 @@ canvas{
 .drop{
 	padding-top: 10px;
 }
+ h2{
+	color:crimson;
+	padding-bottom:0px;
+ }
+ card{
+	width:50%;
+	height:50%;
+ }

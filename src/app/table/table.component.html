@@ -1,0 +1,16 @@
+
+<!--div *ngIf="showChart">
+  <canvasjs-chart
+    [options]="chartOptions"
+    (chartInstance)="getChartInstance($event)"
+    [styles]="{ width: '100%', height: '360px' }"
+  ></canvasjs-chart>
+</div-->
+
+<div class="col-2">
+  <h3><b>country :</b></h3>
+  <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="tablecont">
+      <option value="">Select Country</option>
+      <option *ngFor="let country of countries">{{ country }}</option>
+  </select>
+</div>
