@@ -10,9 +10,12 @@ nav{
 }
 .side-nav-button:hover{
     background-color: rgb(173, 162, 162);
-    border-radius: 30%;
+    border-radius: 50%;
 }
 a{
     text-align: center;
+}
+.fa-solid{
+    size: 10px;
 }
 

@@ -1,79 +1,84 @@
 <!-- Search Panel -->
 <br><br><br>
 <div class="container1">
-    <h2>SUMMARY OF TABLE</h2>
     <div class="row">
-
-        <div class="col-2">
-            <label><b>country :</b></label>
+        <div class="col-3 m-2">
+            <label><b>Country :</b></label>
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="country">
                 <option value="">Select Country</option>
                 <option *ngFor="let country of countries">{{ country }}</option>
             </select>
         </div>
-
-        <div class="col-2">
+       
+        <div class="col-3 m-2">
             <label><b>Indicator Type :</b></label>
-            <select class="custom-select " id="inputGroupSelect02" [(ngModel)]="indType">
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="indType">
                 <option value="">Select Indicator Type</option>
                 <option *ngFor="let ind of indicators">{{ ind }}</option>
             </select>
         </div>
-
-        <div class="col-2">
+     
+        <div class="col-3 m-2">
             <label><b>Year :</b></label>
-            <select class="custom-select " id="inputGroupSelect02" [(ngModel)]="year">
+            <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="year">
                 <option value="">Select Year</option>
                 <option *ngFor="let year of years">{{ year }}</option>
             </select>
         </div>
-        <div class="col-1">
+      
+        <div class="col-2 m-2">
             <label><br></label>
             <br>
-            <button class="btn btn-primary " (click)="calculate()">Search</button>
+            <button class="btn btn-primary  m-1" (click)="calculate()">Search</button>
         </div>
 
     </div>
 </div>
+      
 <!-- Cards -->
 <div class="container">
+    <h2>SUMMARY :</h2>
     <div class="row">
-
-        <div class="col-3">
-            <div class="card p-3 bg-primary  m-1">
+        <div class="col-4">
+            <div class="card p-3 bg-primary h-100 d-flex flex-column  m-1">
                 <div class="card-body ">
                     <div class="card-title">
-                        <h3><b>Energy Indicators</b></h3>
+                        <h3><b>Energy Indicators<hr color="black"></b></h3>
+                        Enery Import : {{ energyImport }} {{ expimpUnit }}
                     </div>
-                    <div> Total Enery Import : {{ energyImport }} {{ expimpUnit }} </div>
+                     
                     <div> Total Enery Export : {{ energyExport }} {{ expimpUnit }} </div>
                 </div>
             </div>
         </div>
 
         <div class="col-4">
-            <div class="card p-3 bg-secondary m-1">
+            
+            <div class="card p-3 bg-secondary  h-100 d-flex flex-column m-1">
                 <div class="card-body">
                     <div class="card-title">
-                        <h3><b>Gas indicators</b></h3>
+                        <h3><b>Gas indicators<hr color="black"></b></h3>
                     </div>
+                    <p></p>
                     <div>Gas Reverse to production : {{ gpRatio }} {{ gpUnit }}</div>
                 </div>
             </div>
         </div>
 
         <div class="col-4">
-            <div class="card p-3 bg-warning  m-1">
+            <div class="card p-3 bg-warning  h-100 d-flex flex-column m-1">
                 <div class="card-body">
                     <div class="card-title">
-                        <h3><b>Economic indicators</b></h3>
+                        <h3><b>Economic indicators<hr color="black"></b></h3>
                     </div>
+                    <p></p>
                     <div>GDP per capita based on PPP : {{ gdpPPP }} {{ gdpUnit }}</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br>
 
 
 <!-- Table -->
@@ -105,9 +110,11 @@
 
 </div>
 </div-->
-<h2>TABLE</h2>
-<div class="table1">
-    <table class="table">
+<br>
+
+<div class="table1 ">
+    <h2>ENERGY INDICATOR-TYPE AND THEIR VALUES :</h2>
+    <table class="table table-bordered border-primary">
         <thead>
             <tr>
                 <th>{{indType}}</th>
@@ -125,19 +132,19 @@
     </table>
 </div>
 
-<h2>BAR CHART</h2>
 <div class="container1">
+    <h2>ENERGY CONSUMPTION FOR LATEST YEARS :</h2>
     <div class="row">
 
-        <div class="col-2">
-            <label><b>country :</b></label>
+        <div class="col-3 m-2">
+            <label><b>Country :</b></label>
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphContSearch">
                 <option value="">Select Country</option>
                 <option *ngFor="let country of countries">{{ country }}</option>
             </select>
         </div>
 
-        <div class="col-2">
+        <div class="col-3 m-2">
             <label><b>Indicator Type :</b></label>
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphIndiTypeSearch"
                 (ngModelChange)="filterIndicator(graphIndiTypeSearch)">
@@ -145,15 +152,16 @@
                 <option *ngFor="let ind of indicators">{{ ind }}</option>
             </select>
         </div>
-
-        <div class="col-2">
+      
+        <div class="col-3 m-2">
             <label><b>Indicator:</b></label>
             <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="graphIndiSearch">
                 <option value="">Indicator</option>
                 <option *ngFor="let Indicator of filteredIndicator">{{ Indicator.indicator }}</option>
             </select>
         </div>
-        <div class="col-1">
+      
+        <div class="col-1 m-2">
             <label><br></label>
             <br>
             <button class="btn btn-primary"

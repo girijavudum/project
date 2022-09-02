@@ -18,6 +18,7 @@
 }
  .container{
     padding-top: 10px;
+	padding-left: 15%;
 }
 .btn{
 	padding-left: 2px;
@@ -25,33 +26,50 @@
 table{
 	width:70%;
 	padding-left: 20px;
-
+    padding-top: 5px;
 	position:center;
 	
 }
 .table1{
-	width:80%;
-	padding-top: 20px;
-	padding-left: 20px;
+	width:100%;
+	padding-top: 0px;
+	padding-left: 15%;
+
 }
 .container1{
 	padding-top: 10px;
+	padding-left: 15%;
+	padding-right: 10%;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 canvas{
-	width: 70%;
+	width: 100%;
 }
 .bar{
-	width: 50%;
+	width: 80%;
+	padding-left: 15%;
 
 }
 .drop{
 	padding-top: 10px;
 }
  h2{
-	color:crimson;
+	color:rgb(224, 116, 138);
+	font-size: 18px;
 	padding-bottom:0px;
+	
  }
- card{
-	width:50%;
-	height:50%;
- }
+
+b{
+ font-size: 16px;
+
+}
+th{
+	text-transform: uppercase;
+	background-color: #3a6070;	
+	color:white
+}
+label{
+	color:lightslategrey;
+}
+

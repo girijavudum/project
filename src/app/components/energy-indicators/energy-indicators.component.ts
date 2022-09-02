@@ -42,7 +42,7 @@ export class EnergyIndicatorsComponent implements OnInit {
       yAxes: {
         title: {
           display: true,
-          text: 'value',
+          text: 'Values(in $)',
           font: {
             size: 15
           }
