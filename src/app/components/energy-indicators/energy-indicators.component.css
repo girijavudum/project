@@ -19,20 +19,22 @@
  .container{
     padding-top: 10px;
 	padding-left: 15%;
+	padding-right: 10%;
 }
 .btn{
 	padding-left: 2px;
 }
 table{
-	width:70%;
-	padding-left: 20px;
+	width:803px;
+	padding-left: 15%;
+	padding-right: 10%;
     padding-top: 5px;
 	position:center;
 	
 }
 .table1{
+
 	width:100%;
-	padding-top: 0px;
 	padding-left: 15%;
 
 }
@@ -43,11 +45,12 @@ table{
 	grid-template-columns: 1fr 1fr 1fr;
 }
 canvas{
-	width: 100%;
+	width: 10%;
 }
 .bar{
-	width: 80%;
+	width: 100%;
 	padding-left: 15%;
+	padding-right: 23%;
 
 }
 .drop{
@@ -71,5 +74,8 @@ th{
 }
 label{
 	color:lightslategrey;
+}
+button{
+	padding: 2px 2px;
 }
 

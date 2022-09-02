@@ -1,6 +1,7 @@
 import { GlobalService } from './../../services/global.service';
 import { Component, OnInit } from '@angular/core';
 import { ChartData, ChartOptions } from 'chart.js';
+import { TitleCasePipe } from '@angular/common';
 
 
 
@@ -23,7 +24,7 @@ export class EnergyIndicatorsComponent implements OnInit {
   salesData: ChartData<'line'> = {
     labels: [],
     datasets: [
-      { label: 'Energy consumption', data: [], tension: 0.5 },
+      { label: '', data: [], tension: 0.5 },
     ],
   };
 
@@ -42,9 +43,10 @@ export class EnergyIndicatorsComponent implements OnInit {
       yAxes: {
         title: {
           display: true,
-          text: 'Values(in $)',
+          text: 'Values',
           font: {
             size: 15
+          
           }
         },
 
@@ -74,12 +76,8 @@ export class EnergyIndicatorsComponent implements OnInit {
   gpUnit: any;
   gdpPPP: any;
   gdpUnit: any;
-  //v1:number='';
-  //v2:number='';
   countryA: any;
-  value1: any[] = [];
   chartData: any[] = [];
-  value2: any[] = [];
   data: any[] = [];
   indicator: any[] = [];
   graphLabel: any[] = [];
@@ -144,6 +142,7 @@ export class EnergyIndicatorsComponent implements OnInit {
       this.enerygyIndicators.forEach((ei: any) => {
         if (ei.country == this.country && ei.indicatorType == this.indType && ei.year == this.year) {
           this.comparision.push(ei);
+
           if (ei.indicator == 'Total energy export') {
             if (ei['value'] != null || ei['value'] != '' || ei['value'] != undefined) {
               energyExp = +energyExp + +ei['value'];
@@ -182,10 +181,7 @@ export class EnergyIndicatorsComponent implements OnInit {
   //table calculation
   tablecal() {
     this.filteredtable = this.enerygyIndicators.filter(val => val.indicatorType == this.tableInd && val.country==this.tablecont && val.year==this.tableyear)
-
-
-
-  }
+     }
 
   //charts filter
   filterIndicator(indicatorType: any) {
@@ -200,7 +196,7 @@ export class EnergyIndicatorsComponent implements OnInit {
       this.salesData = {
         labels: this.graphLabel,
         datasets: [
-          { label: 'Energy consumption', data: this.graphValue, tension: 0.5 },
+          { label: this.graphIndiTypeSearch, data: this.graphValue, tension: 0.5 },
         ],
       };
     } else {

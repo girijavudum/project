@@ -12783,5 +12783,6 @@ id,country,indicatorType,indicator,unit,year,value
 12782,yemen,energy efficiency indicators,Energy efficiency potential - Industry Sector,% of EE potential,2010,
 12783,yemen,energy efficiency indicators,Energy efficiency potential - Transport Sector,% of EE potential,2010,
 12784,yemen,energy efficiency indicators,Energy efficiency potential - Services Sector,% of EE potential,2010,
-12785,,,,% of EE potential,,
-12784,testing,energy efficiency testing,testing,% of EE potential,2010,
+12785,yemen,energy efficiency indicators,Energy efficiency potential - Services Sector,% of EE potential,2010,11
+12786,testing,energy efficiency testing,testing,% of EE potential,2010,
+12787,testing,energy efficiency testing,testing,% of EE potential,2010,
